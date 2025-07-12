@@ -16,10 +16,10 @@ public class RoleDaoImpl implements RoleDao {
     public Role findRoleByName(String theRoleName) {
         TypedQuery<Role> theQuery = entityManager.createQuery("from Role where userName=:roleName", Role.class);
         theQuery.setParameter("roleName", theRoleName);
-        User theUser = null;
+        Role theRole = null;
         try{
-            theUser = theQuery.getSingleResult();
-        } catch (Exception e){theUser = null;}
-        return theUser;
+            theRole = theQuery.getSingleResult();
+        } catch (Exception e){theRole = null;}
+        return theRole;
     }
 }
