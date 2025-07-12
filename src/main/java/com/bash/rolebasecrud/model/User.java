@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class User {
     private int id;
-    private String username;
+    private String userName;
     private String password;
-    private boolean isEnabled;
+    private boolean enabled;
 }
