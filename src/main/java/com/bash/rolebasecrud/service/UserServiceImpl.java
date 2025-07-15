@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import
 
 @Service
 @AllArgsConstructor
@@ -25,6 +26,6 @@ public class UserServiceImpl implements  UserService {
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
-        return
+        return new
     }
 }
